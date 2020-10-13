@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
-import GameBoard from './components/GameBoard';
+import '../styles/App.css';
+import GameBoard from './GameBoard';
 
 function App() {
   return (
     <div className="App">
-      <p>App</p>
+      <h1>Tic-Tac-Toe</h1>
+      <p>built in ReactJS</p>
       <GameBoard />
     </div>
   );

@@ -1,9 +1,19 @@
 import React from 'react';
+import '../styles/GameBoard.css';
+import Square from './Square';
 
 function GameBoard() {
   return (
     <div className="GameBoard">
-      <p>GameBoard</p>
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
     </div>
   );
 }
