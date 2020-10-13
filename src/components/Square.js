@@ -9,8 +9,10 @@ function Square(props) {
         if (move === ' ') {
             if (props.player === true) {
                 setMove('X')
+                props.setXsquares([...props.Xsquares, props.name])
             } else if (props.player === false) {
-                setMove('0')
+                setMove('O')
+                props.setOsquares([...props.Osquares, props.name])
             }
             props.nextTurn()
             console.log(`Move made: ${move}`)
@@ -19,12 +21,17 @@ function Square(props) {
         
     }
 
+    const checkForWin = () => {
+
+    }
+
     useEffect(() => {
 
     })
 
     return (
-        <div className="Square" onClick={clicked} > 
+        <div className="Square" onClick={clicked} >
+            <h1>{move}</h1> 
         </div>
         );
 }
