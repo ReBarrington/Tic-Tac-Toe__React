@@ -10,10 +10,19 @@ function Square(props) {
             if (props.player === true) {
                 setMove('X')
                 props.setXsquares([...props.Xsquares, props.name])
+                if (props.Xsquares.length > 2 ) {
+                    checkForWin()
+                }
+
             } else if (props.player === false) {
                 setMove('O')
                 props.setOsquares([...props.Osquares, props.name])
+                if (props.Osquares.length > 2 ) {
+                    checkForWin()
+                }
+
             }
+
             props.nextTurn()
             console.log(`Move made: ${move}`)
             console.log(`Current Player: ${props.player}`)
@@ -21,8 +30,10 @@ function Square(props) {
         
     }
 
-    const checkForWin = () => {
-
+    const checkForWin = (arr) => {
+        for (square in arr) {
+            if 
+        }
     }
 
     useEffect(() => {
