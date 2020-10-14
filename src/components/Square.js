@@ -10,45 +10,45 @@ function Square(props) {
             if (props.player === true) {
                 setMove('X')
                 props.setXsquares([...props.Xsquares, props.name])
-                if (props.Xsquares.length > 2 ) {
+                if (props.Xsquares.length > 1 ) {
                     checkForWin(props.Xsquares)
                 }
 
             } else if (props.player === false) {
                 setMove('O')
                 props.setOsquares([...props.Osquares, props.name])
-                if (props.Osquares.length > 2 ) {
+                if (props.Osquares.length > 1 ) {
                     checkForWin(props.Osquares)
                 }
 
             }
 
             props.nextTurn()
-            console.log(`Move made: ${move}`)
-            console.log(`Current Player: ${props.player}`)
         }
         
     }
 
     const checkForWin = (arr) => {
-        let points = 0;
-        // need 4 points to win
-        const pos1 = '';
-        const pos2 = '';
 
-        arr.forEach(square => {
-            if (pos1 === square.splice(0,2) || pos2 === square.splice(4,6) ) {
-                points += 1
-            };
+        const ScoreBoard = {
+            Pos1: '',
+            Pos2: '',
+            points: 0,
+            // need 3 points to win
+        }
 
-            if (points >= 3) {
-                console.log('WE HAVE A WINNER!')
-                return
-            };
+        while (ScoreBoard.points < 3) {
 
-            pos1 = square.slice(0,2)
-            pos2 = square.slice(4,6)
-        }) 
+            arr.forEach(square => {
+                const squareArr = (square.split([' ']))
+                if (ScoreBoard.Pos1 === squareArr[0] || ScoreBoard.Pos2 === squareArr[1] ) {
+                    ScoreBoard.points += 1
+                };
+    
+                ScoreBoard.Pos1 = squareArr[0]
+                ScoreBoard.Pos2 = squareArr[1]
+            }) 
+        } console.log('WE HAVE A WINNER!!')
     }
 
     

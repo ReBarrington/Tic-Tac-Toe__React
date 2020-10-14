@@ -12,10 +12,6 @@ function GameBoard() {
 
     const nextTurn = () => {
         setPlayer(!player)
-        console.log(player)
-        console.log(`X's Moves: ${Xsquares}`)
-        console.log(`O's Moves: ${Osquares}`)
-
     }
 
 
