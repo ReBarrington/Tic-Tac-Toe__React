@@ -22,7 +22,7 @@ function GameBoard() {
   return (
     <div className="GameBoard">
         <Square 
-            name='top left' 
+            name={'top left'} 
             player={player}
             Osquares={Osquares}
             Xsquares={Xsquares}
@@ -31,7 +31,7 @@ function GameBoard() {
             nextTurn={nextTurn} 
         />
         <Square 
-            name='top mid' 
+            name={'top mid' }
             player={player}
             Osquares={Osquares}
             Xsquares={Xsquares}
@@ -40,7 +40,7 @@ function GameBoard() {
             nextTurn={nextTurn} 
         />  
         <Square 
-            name='top right' 
+            name={'top right'} 
             player={player}
             Osquares={Osquares}
             Xsquares={Xsquares}
@@ -49,7 +49,7 @@ function GameBoard() {
             nextTurn={nextTurn} 
         />  
         <Square 
-            name='mid left' 
+            name={'mid left'} 
             player={player}
             Osquares={Osquares}
             Xsquares={Xsquares}
@@ -58,7 +58,7 @@ function GameBoard() {
             nextTurn={nextTurn} 
         />  
         <Square 
-            name='mid mid' 
+            name={'mid mid'}
             player={player}
             Osquares={Osquares}
             Xsquares={Xsquares}
@@ -67,7 +67,7 @@ function GameBoard() {
             nextTurn={nextTurn} 
         />  
         <Square 
-            name='mid right' 
+            name={'mid right'}
             player={player}
             Osquares={Osquares}
             Xsquares={Xsquares}
@@ -76,7 +76,7 @@ function GameBoard() {
             nextTurn={nextTurn} 
         />  
         <Square 
-            name='bot left' 
+            name={'bot left'} 
             player={player}
             Osquares={Osquares}
             Xsquares={Xsquares}
@@ -85,7 +85,7 @@ function GameBoard() {
             nextTurn={nextTurn}  
         />  
         <Square 
-            name='bot mid' 
+            name={'bot mid'} 
             player={player}
             Osquares={Osquares}
             Xsquares={Xsquares}
@@ -94,7 +94,7 @@ function GameBoard() {
             nextTurn={nextTurn}  
         />  
         <Square 
-            name='bot right' 
+            name={'bot right'} 
             player={player}
             Osquares={Osquares}
             Xsquares={Xsquares}

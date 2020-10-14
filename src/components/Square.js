@@ -11,14 +11,14 @@ function Square(props) {
                 setMove('X')
                 props.setXsquares([...props.Xsquares, props.name])
                 if (props.Xsquares.length > 2 ) {
-                    checkForWin()
+                    checkForWin(props.Xsquares)
                 }
 
             } else if (props.player === false) {
                 setMove('O')
                 props.setOsquares([...props.Osquares, props.name])
                 if (props.Osquares.length > 2 ) {
-                    checkForWin()
+                    checkForWin(props.Osquares)
                 }
 
             }
@@ -31,10 +31,27 @@ function Square(props) {
     }
 
     const checkForWin = (arr) => {
-        for (square in arr) {
-            if 
-        }
+        let points = 0;
+        // need 4 points to win
+        const pos1 = '';
+        const pos2 = '';
+
+        arr.forEach(square => {
+            if (pos1 === square.splice(0,2) || pos2 === square.splice(4,6) ) {
+                points += 1
+            };
+
+            if (points >= 3) {
+                console.log('WE HAVE A WINNER!')
+                return
+            };
+
+            pos1 = square.slice(0,2)
+            pos2 = square.slice(4,6)
+        }) 
     }
+
+    
 
     useEffect(() => {
 
