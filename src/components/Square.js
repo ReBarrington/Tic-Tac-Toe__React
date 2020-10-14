@@ -37,7 +37,7 @@ function Square(props) {
             // need 3 points to win
         }
 
-        while (ScoreBoard.points < 3) {
+        if (ScoreBoard.points < 3) {
 
             arr.forEach(square => {
                 const squareArr = (square.split([' ']))
@@ -48,14 +48,11 @@ function Square(props) {
                 ScoreBoard.Pos1 = squareArr[0]
                 ScoreBoard.Pos2 = squareArr[1]
             }) 
-        } console.log('WE HAVE A WINNER!!')
+        } 
+        console.log('WE HAVE A WINNER!!')
+        console.log(`SCOREBOARD: ${ScoreBoard.points} pts`)
     }
 
-    
-
-    useEffect(() => {
-
-    })
 
     return (
         <div className="Square" onClick={clicked} >
