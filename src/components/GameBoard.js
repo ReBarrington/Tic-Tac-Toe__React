@@ -4,6 +4,8 @@ import Square from './Square';
 
 function GameBoard() {
 
+    const squares = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
     const [player, setPlayer] = useState(true);
     // true is X's, false is O's
 
@@ -17,87 +19,17 @@ function GameBoard() {
 
   return (
     <div className="GameBoard">
-        <Square 
-            name={'top left'} 
-            player={player}
-            Osquares={Osquares}
-            Xsquares={Xsquares}
-            setXsquares={setXsquares} 
-            setOsquares={setOsquares} 
-            nextTurn={nextTurn} 
-        />
-        <Square 
-            name={'top mid' }
-            player={player}
-            Osquares={Osquares}
-            Xsquares={Xsquares}
-            setXsquares={setXsquares} 
-            setOsquares={setOsquares} 
-            nextTurn={nextTurn} 
-        />  
-        <Square 
-            name={'top right'} 
-            player={player}
-            Osquares={Osquares}
-            Xsquares={Xsquares}
-            setXsquares={setXsquares} 
-            setOsquares={setOsquares} 
-            nextTurn={nextTurn} 
-        />  
-        <Square 
-            name={'mid left'} 
-            player={player}
-            Osquares={Osquares}
-            Xsquares={Xsquares}
-            setXsquares={setXsquares} 
-            setOsquares={setOsquares} 
-            nextTurn={nextTurn} 
-        />  
-        <Square 
-            name={'mid mid'}
-            player={player}
-            Osquares={Osquares}
-            Xsquares={Xsquares}
-            setXsquares={setXsquares} 
-            setOsquares={setOsquares} 
-            nextTurn={nextTurn} 
-        />  
-        <Square 
-            name={'mid right'}
-            player={player}
-            Osquares={Osquares}
-            Xsquares={Xsquares}
-            setXsquares={setXsquares} 
-            setOsquares={setOsquares} 
-            nextTurn={nextTurn} 
-        />  
-        <Square 
-            name={'bot left'} 
-            player={player}
-            Osquares={Osquares}
-            Xsquares={Xsquares}
-            setXsquares={setXsquares} 
-            setOsquares={setOsquares} 
-            nextTurn={nextTurn}  
-        />  
-        <Square 
-            name={'bot mid'} 
-            player={player}
-            Osquares={Osquares}
-            Xsquares={Xsquares}
-            setXsquares={setXsquares} 
-            setOsquares={setOsquares} 
-            nextTurn={nextTurn}  
-        />  
-        <Square 
-            name={'bot right'} 
-            player={player}
-            Osquares={Osquares}
-            Xsquares={Xsquares}
-            setXsquares={setXsquares} 
-            setOsquares={setOsquares} 
-            nextTurn={nextTurn} 
-        />
+        {squares.map((squareNum) => (
+             <Square 
+             key={squareNum} 
+             player={player}
+             Osquares={Osquares}
+             Xsquares={Xsquares}
+             setXsquares={setXsquares} 
+             setOsquares={setOsquares} 
+             nextTurn={nextTurn} 
+            />
+        ))}
     </div>
   );
 }
