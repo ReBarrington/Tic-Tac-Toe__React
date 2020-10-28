@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <h1>Tic-Tac-Toe</h1>
-      <p>built in ReactJS</p>
+      <p>built in React</p>
       <GameBoard />
     </div>
   );
