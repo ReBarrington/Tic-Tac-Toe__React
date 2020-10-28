@@ -10,10 +10,11 @@ function Square(props) {
       if (props.player) {
         setMove('X');
         props.setXsquares([...props.Xsquares, props.name]);
-        // console.log(`X's moves: ${props.Xsquares}`)
+        console.log(`X's moves: ${props.Xsquares}`)
       } else {
         setMove('O');
         props.setOsquares([...props.Osquares, props.name]);
+        console.log(`O's moves: ${props.Osquares}`)
       }
       checkForWin();
       props.nextTurn();
