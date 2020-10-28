@@ -21,6 +21,7 @@ function GameBoard() {
       {squares.map((squareNum) => (
         <Square 
           key={squareNum} 
+          name={squareNum}
           player={player}
           Osquares={Osquares}
           Xsquares={Xsquares}
