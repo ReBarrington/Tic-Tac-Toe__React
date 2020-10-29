@@ -7,36 +7,29 @@ function Square(props) {
 
   const clicked = () => {
     if (move === ' ') {
+      let updatedArr = [];
       if (props.player) {
         setMove('X');
-        props.setXsquares([...props.Xsquares, props.name]);
+        updatedArr = [...props.Xsquares, props.name]
+        props.setXsquares(updatedArr);
         console.log(`X's moves: ${props.Xsquares}`)
       } else {
         setMove('O');
-        props.setOsquares([...props.Osquares, props.name]);
+        updatedArr = [...props.Osquares, props.name]
+        props.setOsquares(updatedArr);
         console.log(`O's moves: ${props.Osquares}`)
       }
-      checkForWin();
+      checkForWin(updatedArr);
       props.nextTurn();
     }
   }
         
-  const checkForWin = () => {
+  const checkForWin = (updatedArr) => {
     if (props.Xsquares.length < 5) {
-      if (props.player) {
-        // player is x
-        if (props.Xsquares.length > 1) {
-          // check for winning combination
-          console.log('CHECKING FOR A WINNER...');
-          compareToWinningCombos(props.Xsquares);
-        }
-      } else {
-        // player is o
-        if (props.Xsquares.length > 2) {
-          // check for winning combination
-          console.log('CHECKING FOR A WINNER...');
-          compareToWinningCombos(props.Osquares);
-        }
+      if (updatedArr.length > 2) {
+        // check for winning combination
+        console.log('CHECKING FOR A WINNER...');
+        compareToWinningCombos(updatedArr);
       }
     } else {
       console.log('GAME IS A DRAW.')
